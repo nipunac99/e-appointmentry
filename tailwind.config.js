@@ -1,4 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+const { colors: defaultColors } = require("tailwindcss/defaultTheme");
+
+const colors = {
+  defaultColors,
+  "primary-color": {
+    500: "#65249b",
+  },
+};
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -8,7 +17,15 @@ module.exports = {
     "./index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: colors,
+    },
   },
-  plugins: [require("flowbite/plugin"), require("@tailwindcss/forms"), require("@shrutibalasa/tailwind-grid-auto-fit")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("@tailwindcss/forms"),
+    require("@shrutibalasa/tailwind-grid-auto-fit"),
+  ],
+
+ 
 };
