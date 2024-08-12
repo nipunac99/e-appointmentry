@@ -4,8 +4,8 @@ import { FaPhotoFilm } from "react-icons/fa6";
 
 function ProfilePage() {
   return (
-    <div className="border-b border-gray-900/10 pb-12">
-      <h2 className="text-base font-bold leading-7 text-gray-900">
+    <div className=" border-gray-900/10 pb-12 bg-white shadow-md pl-5 pr-5 rounded-3xl">
+      <h2 className="pt-3 text-base font-bold leading-7 text-gray-900">
         Company Information
       </h2>
       <p className="mt-1 text-sm leading-6 text-gray-600">
@@ -26,7 +26,7 @@ function ProfilePage() {
               name="first-name"
               type="text"
               autoComplete="given-name"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>
@@ -44,7 +44,7 @@ function ProfilePage() {
               name="last-name"
               type="text"
               autoComplete="family-name"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>
@@ -64,7 +64,7 @@ function ProfilePage() {
               name="email"
               type="email"
               autoComplete="email"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>
@@ -81,9 +81,9 @@ function ProfilePage() {
               id="country"
               name="country"
               autoComplete="country-name"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:max-w-xs sm:text-sm sm:leading-6"
             >
-              <option>United States</option>
+              <option className=" focus:ring-inset focus:ring-purple-700">United States</option>
               <option>Canada</option>
               <option>Mexico</option>
             </select>
@@ -105,7 +105,7 @@ function ProfilePage() {
               name="street-address"
               type="text"
               autoComplete="street-address"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>
@@ -123,7 +123,7 @@ function ProfilePage() {
               name="city"
               type="text"
               autoComplete="address-level2"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>
@@ -141,7 +141,7 @@ function ProfilePage() {
               name="region"
               type="text"
               autoComplete="address-level1"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>
@@ -159,7 +159,7 @@ function ProfilePage() {
               name="postal-code"
               type="text"
               autoComplete="postal-code"
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
             />
           </div>
         </div>

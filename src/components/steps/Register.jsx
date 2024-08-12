@@ -66,8 +66,12 @@ export default function HorizontalLinearStepper() {
   };
 
   return (
-    <div className="container mx-auto px-4 mt-20">
-      <div className="bg-white dark:bg-gray-900">
+    
+    
+    <div className="container mx-auto pl-3 pr-3 mt-5 md:mt-20 ">
+       <h1 className="mx-auto text-2xl text-center font-bold md:hidden mt-5 mb-10 text-primary-color-500">Registration</h1>
+      <div className="dark:bg-gray-900">
+     
         <div className="flex justify-center">
           <div className="hidden bg-cover lg:block">
             {/* <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
@@ -83,7 +87,7 @@ export default function HorizontalLinearStepper() {
             </div> */}
           </div>
 
-          <div className="flex items-center w-full max-w-screen px-6 mt-3">
+          <div className="flex items-center w-full max-w-screen mt-3">
             <div className="flex-1">
               <div>
                 {/* <h2 className="text-4xl font-bold text-gray-700 dark:text-white mt-5 mb-7">

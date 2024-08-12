@@ -1,12 +1,11 @@
-import { CheckBox } from "@mui/icons-material";
-import { Checkbox, Label } from "flowbite-react";
 import React from "react";
 
 export default function Account() {
   return (
-    <div className="antialiased">
+    <div className="antialiased pl-3 pr-3">
       <div>
-        <div className="max-w-lg mx-auto my-10 mt-20  bg-slate-200 p-8 rounded-xl shadow-2xl shadow-slate-300">
+      <h1 className="mx-auto text-2xl text-center font-bold md:hidden mt-5  text-primary-color-500">Account Information</h1>
+        <div className="max-w-lg mx-auto my-10 mt-10 md:mt-20 bg-white p-8 rounded-3xl shadow-md">
           <h1 className="text-4xl font-bold">Login</h1>
           <p className="text-slate-500">Hi, Welcome back 👋</p>
 

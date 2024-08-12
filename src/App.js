@@ -55,9 +55,9 @@ function App() {
   return (
     // #### if you need to change width you can change here and check other staff ####
 
-    <div className="md:w-[70%] xl:w-[75%] mx-auto shadow-xl rounded-2xl pb-2 bg-none">
+    <div className="md:w-[70%] xl:w-[75%] mx-auto rounded-2xl pb-2 bg-none">
       {/* stepper */}
-      <div className="container horizontal mt-5">
+      <div className="container horizontal mt-5 w-[100%]">
         <Stepper steps={steps} currentStep={currentStep} />
 
         {/* Display Components */}
