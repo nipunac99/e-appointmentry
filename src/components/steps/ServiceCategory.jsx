@@ -5,8 +5,8 @@ import { FaCirclePlus } from "react-icons/fa6";
 
 function ServiceCategory() {
   return (
-    <div className="flex justify-center mt-2">
-      <div className="grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2 gap-4 justify-items-center md:mt-10 bg-white">
+    <div className="flex justify-center mt-2 pl-3 pr-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2 gap-4 justify-items-center md:mt-10 bg-white rounded-2xl shadow-md">
       <h1 className="mx-auto text-2xl text-center font-bold md:hidden mt-5 text-primary-color-500">Service Category</h1>
         <div className="px-5 mt-5 md:mt-5 md:mb-5">
           <span className="text-purple-800 text-xl font-semibold">

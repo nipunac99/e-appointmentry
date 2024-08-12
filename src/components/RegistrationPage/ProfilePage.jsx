@@ -5,7 +5,7 @@ import { FaPhotoFilm } from "react-icons/fa6";
 function ProfilePage() {
   return (
     <div className=" border-gray-900/10 pb-12 bg-white shadow-md pl-5 pr-5 rounded-3xl">
-      <h2 className="pt-3 text-base font-bold leading-7 text-gray-900">
+      <h2 className="pt-5 text-base font-bold leading-7 text-gray-900">
         Company Information
       </h2>
       <p className="mt-1 text-sm leading-6 text-gray-600">

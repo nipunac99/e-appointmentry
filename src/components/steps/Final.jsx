@@ -3,7 +3,7 @@ import React from "react";
 export default function Final() {
   return (
     
-      <div className="flex-col flex items-center max-sm:mt-20 max-md:mt-20 max-2xl:mt-20 md:mt-20 md:mb-20">
+      <div className="flex-col flex items-center max-sm:mt-20 max-md:mt-20 max-2xl:mt-20 md:mt-20 md:mb-20 bg-white mr-3 ml-3 pt-5 pb-5 shadow-md rounded-2xl">
         <div className="text-green-400">
           <svg
             clipRule="evenodd"
@@ -13,7 +13,7 @@ export default function Final() {
             shapeRendering="geometricPrecision"
             textDecoration="geometricPrecision"
             viewBox="0 0 2.54 2.54"
-            width="512"
+           
             xmlns="http://www.w3.org/2000/svg"
             id="fi_5610944"
           >

@@ -5,7 +5,7 @@ import { FaPhotoFilm } from "react-icons/fa6";
 function CompanyProfile() {
   return (
     <div className="bg-white shadow-md pl-5 pr-5 rounded-3xl">
-      <h2 className="pt-3 font-bold  text-gray-900">
+      <h2 className="pt-5 font-bold  text-gray-900">
        Company Profile
       </h2>
       <p className="mt-1 text-sm leading-6 text-gray-600">
@@ -169,7 +169,7 @@ function CompanyProfile() {
             >
               Cover photo
             </label>
-            <div className="mt-2 mb-5 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+            <div className="mt-2 mb-10 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
               <div className="text-center">
                 <FaPhotoFilm
                   aria-hidden="true"
