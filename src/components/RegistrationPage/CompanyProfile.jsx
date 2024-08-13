@@ -5,9 +5,7 @@ import { FaPhotoFilm } from "react-icons/fa6";
 function CompanyProfile() {
   return (
     <div className="bg-white shadow-md pl-5 pr-5 rounded-3xl">
-      <h2 className="pt-5 font-bold  text-gray-900">
-       Company Profile
-      </h2>
+      <h2 className="pt-5 font-bold  text-gray-900">Company Profile</h2>
       <p className="mt-1 text-sm leading-6 text-gray-600">
         This information will be displayed publicly so be careful what you
         share.

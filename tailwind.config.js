@@ -27,5 +27,7 @@ module.exports = {
     require("@shrutibalasa/tailwind-grid-auto-fit"),
   ],
 
+  
+
  
 };
