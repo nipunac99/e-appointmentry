@@ -1,196 +1,171 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import CompanyProfile from "../RegistrationPage/CompanyProfile";
-import ProfilePage from "../RegistrationPage/ProfilePage";
-import {
-  FaAngleLeft,
-  FaAngleRight,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa6";
-import { FaBeer } from "react-icons/fa";
-import { IconContext } from "react-icons";
-import { BiChevronRight } from "react-icons/bi";
+import React from "react";
+import { BiUserCircle } from "react-icons/bi";
+import { FaPhotoFilm } from "react-icons/fa6";
 
-const steps = ["Select campaign settings", "Create an ad group"];
-
-export default function HorizontalLinearStepper() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
-
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
-
-  const handleNext = () => {
-    let newSkipped = skipped;
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values());
-      newSkipped.delete(activeStep);
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped(newSkipped);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
+function ProfilePage() {
   return (
-    
-    
-    <div className="container mx-auto pl-3 pr-3 mt-5 md:mt-20 ">
-       <h1 className="mx-auto text-2xl text-center font-bold md:hidden mt-5 mb-10 text-primary-color-500">Registration</h1>
-      <div className="dark:bg-gray-900">
-     
-        <div className="flex justify-center">
-          <div className="hidden bg-cover lg:block">
-            {/* <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
-              <div>
-                <h2 className="text-4xl font-bold text-white">Brand</h2>
+    <div className=" border-gray-900/10 pb-12 bg-white shadow-md pl-5 pr-5 rounded-3xl  md:mt-20 md:mb-20 ml-3 mr-3">
+      <h2 className="pt-5 text-base font-bold leading-7 text-gray-900">
+        Company Information
+      </h2>
+      <p className="mt-1 text-sm leading-6 text-gray-600">
+        Use a permanent address where you can receive mail.
+      </p>
 
-                <p className="max-w-xl mt-3 text-gray-300">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
-                  autem ipsa, nulla laboriosam dolores, repellendus perferendis
-                  libero suscipit nam temporibus molestiae
-                </p>
-              </div>
-            </div> */}
+      <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div className="sm:col-span-3">
+          <label
+            htmlFor="first-name"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Company name
+          </label>
+          <div className="mt-2">
+            <input
+              id="first-name"
+              name="first-name"
+              type="text"
+              autoComplete="given-name"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
           </div>
+        </div>
 
-          <div className="flex items-center w-full max-w-screen mt-3">
-            <div className="flex-1">
-              <div>
-                {/* <h2 className="text-4xl font-bold text-gray-700 dark:text-white mt-5 mb-7">
-                  Brand
-                </h2> */}
+        <div className="sm:col-span-3">
+          <label
+            htmlFor="last-name"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Slug
+          </label>
+          <div className="mt-2">
+            <input
+              id="last-name"
+              name="last-name"
+              type="text"
+              autoComplete="family-name"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
 
-                <Box sx={{ width: "100%" }}>
-                  <Stepper activeStep={activeStep}>
-                    {steps.map((label, index) => {
-                      const stepProps = {};
-                      const labelProps = {};
-                      if (isStepOptional(index)) {
-                        labelProps.optional = (
-                          <Typography sx={{ mt: 2, mb: 1 }} variant="caption">
-                            {/* Optional */}
-                          </Typography>
-                        );
-                      }
-                      if (isStepSkipped(index)) {
-                        stepProps.completed = false;
-                      }
-                      return (
-                        <Step key={label} {...stepProps}>
-                          <StepLabel {...labelProps}>{label}</StepLabel>
-                        </Step>
-                      );
-                    })}
-                  </Stepper>
-                  {activeStep === steps.length ? (
-                    <React.Fragment>
-                      <Typography sx={{ mt: 2, mb: 1, b: 5 }}>
-                        All steps completed - you&apos;re finished ✅
-                      </Typography>
-                      <Box
-                        sx={{ display: "flex", flexDirection: "row", pt: 2 }}
-                      >
-                        <Box sx={{ flex: "1 1 auto" }} />
-                        <Button onClick={handleReset}>Reset</Button>
-                      </Box>
-                    </React.Fragment>
-                  ) : (
-                    <React.Fragment>
-                      <Typography sx={{ mt: 2, mb: 1 }}>
-                        {/* Step {activeStep + 1} */}
+        {/*  */}
 
-                        {/* ###### */}
-                        {activeStep === 1 ? (
-                          <ProfilePage />
-                        ) : (
-                          <CompanyProfile />
-                        )}
-                        {/* ###### */}
-                      </Typography>
-                      <Box
-                        sx={{ display: "flex", flexDirection: "row", pt: 2 }}
-                      >
-                        <Button
-                          color="inherit"
-                          disabled={activeStep === 0}
-                          onClick={handleBack}
-                          sx={{ mr: 1 }}
-                        >
-                          <IconContext.Provider
-                            value={{ color: "blue", size: "25px",}}
-                          >
-                            <div>
-                              <FaAngleLeft />
-                            </div>
-                          </IconContext.Provider>
-                        </Button>
-                        <Box sx={{ flex: "1 1 auto" }} />
-                        {/* {isStepOptional(activeStep) && (
-                          <Button
-                            color="inherit"
-                            onClick={handleSkip}
-                            sx={{ mr: 1 }}
-                          >
-                            Skip
-                          </Button>
-                        )} */}
+        <div className="sm:col-span-3">
+          <label
+            htmlFor="last-name"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Company E-mail
+          </label>
+          <div className="mt-2">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
 
-                        <Button onClick={handleNext}>
-                          {activeStep === steps.length - 0 ? (
-                            "Finish"
-                          ) : (
-                            <IconContext.Provider
-                              value={{ color: "blue", size: "25px" }}
-                            >
-                              <div>
-                                <FaAngleRight />
-                              </div>
-                            </IconContext.Provider>
-                          )}
-                        </Button>
-                      </Box>
-                    </React.Fragment>
-                  )}
-                </Box>
-              </div>
-            </div>
+        <div className="sm:col-span-3">
+          <label
+            htmlFor="country"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Country
+          </label>
+          <div className="mt-2">
+            <select
+              id="country"
+              name="country"
+              autoComplete="country-name"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:max-w-xs sm:text-sm sm:leading-6"
+            >
+              <option className=" focus:ring-inset focus:ring-purple-700">United States</option>
+              <option>Canada</option>
+              <option>Mexico</option>
+            </select>
+          </div>
+        </div>
+
+        {/*  */}
+
+        <div className="col-span-full">
+          <label
+            htmlFor="street-address"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            Company address
+          </label>
+          <div className="mt-2">
+            <input
+              id="street-address"
+              name="street-address"
+              type="text"
+              autoComplete="street-address"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+
+        <div className="sm:col-span-2 sm:col-start-1">
+          <label
+            htmlFor="city"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            City
+          </label>
+          <div className="mt-2">
+            <input
+              id="city"
+              name="city"
+              type="text"
+              autoComplete="address-level2"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+
+        <div className="sm:col-span-2">
+          <label
+            htmlFor="region"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            State / Province
+          </label>
+          <div className="mt-2">
+            <input
+              id="region"
+              name="region"
+              type="text"
+              autoComplete="address-level1"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+
+        <div className="sm:col-span-2">
+          <label
+            htmlFor="postal-code"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            ZIP / Postal code
+          </label>
+          <div className="mt-2">
+            <input
+              id="postal-code"
+              name="postal-code"
+              type="text"
+              autoComplete="postal-code"
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-700 bg-transparent sm:text-sm sm:leading-6"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default ProfilePage;

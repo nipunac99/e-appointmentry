@@ -5,9 +5,8 @@ export default function Detail() {
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
-      {/*  */}
+        {/*  */}
         <div className="container px-5 py-5 md:py-24 mx-auto">
-        
           <div className="flex flex-col text-center w-full mb-10">
             <h1 className="sm:text-5xl text-2xl font-bold title-font mb-2 text-primary-color-500">
               Choose your right plan!

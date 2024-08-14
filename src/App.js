@@ -16,9 +16,9 @@ function App() {
   const [finalData, setFinalData] = useState([]);
 
   const steps = [
-    "Account Information",
     "Your Plan",
-    "Registrstion",
+    "Company Profile",
+    "Company Information",
     "Service Category",
     "Complete",
   ];
@@ -26,9 +26,9 @@ function App() {
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <Account />;
-      case 2:
         return <SubscriptionPlan />;
+        case 2:
+        return <Account />;
       case 3:
         return <Register />;
       case 4:
