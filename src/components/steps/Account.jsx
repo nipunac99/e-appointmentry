@@ -4,7 +4,7 @@ export default function Account() {
   return (
     <div className="antialiased pl-3 pr-3">
       <div>
-      <h1 className="mx-auto text-2xl text-center font-bold md:hidden mt-5  text-primary-color-500">Account Information</h1>
+      <h1 className="mx-auto text-2xl text-center font-bold md:hidden mt-5  text-primary-color-500"><span className="n-underline-bacon">Account Information</span></h1>
         <div className="max-w-lg mx-auto my-10 mt-10 md:mt-20 bg-white p-8 rounded-3xl shadow-md">
           <h1 className="text-4xl font-bold">Login</h1>
           <p className="text-slate-500">Hi, Welcome back 👋</p>

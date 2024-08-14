@@ -419,7 +419,7 @@ function ServiceCategory() {
             </div>
 
             <div className="col-span-2">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-fit">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-fit">
                 <div>
                   {/* 1 */}
                   <div className="grid grid-cols-2 gap-2 mt-5">
@@ -429,7 +429,7 @@ function ServiceCategory() {
                         color="green"
                         icon={HiCheck}
                       >
-                        Full Legs
+                        Hair cutting
                       </Badge>
                     </div>
                     <div>
@@ -439,10 +439,10 @@ function ServiceCategory() {
                         color="green"
                         icon={HiCheck}
                       >
-                        Half Legs
+                        Colouring
                       </Badge>
                     </div>
-                    <div>
+                    {/* <div>
                       <Badge
                         className="text-sm font-semibold cursor-pointer"
                         color="green"
@@ -459,7 +459,7 @@ function ServiceCategory() {
                       >
                         Underms
                       </Badge>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* 1 */}
@@ -467,7 +467,7 @@ function ServiceCategory() {
 
                 <div>
                   {/* 2 */}
-                  <div className="grid grid-cols-2 gap-2 mt-5">
+                  {/* <div className="grid grid-cols-2 gap-2 mt-5">
                     <div>
                       <Badge
                         className="text-sm font-semibold cursor-pointer"
@@ -505,7 +505,7 @@ function ServiceCategory() {
                         Underms
                       </Badge>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -540,12 +540,12 @@ function ServiceCategory() {
           <div className="grid grid-flow-row-dense grid-cols-2">
             <div className="col-span-2 md:mt-5">
               <span className="font-semibold text-slate-600 text-lg focus:z-0">
-                🟣 Beauty Salon
+                🟣 Nail Salon
               </span>
             </div>
 
             <div className="col-span-2">
-              <div className="grid grid-cols-1 md:grid-cols-2 w-fit gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-1 w-fit gap-4">
                 <div>
                   <div className="grid grid-cols-2 gap-2 mt-5">
                     <div>
@@ -554,17 +554,7 @@ function ServiceCategory() {
                         color="purple"
                         icon={HiCheck}
                       >
-                        Full Legs
-                      </Badge>
-                    </div>
-                    <div>
-                      {" "}
-                      <Badge
-                        className="text-sm font-semibold cursor-pointer"
-                        color="purple"
-                        icon={HiCheck}
-                      >
-                        Half Legs
+                        Gel Manicure
                       </Badge>
                     </div>
                     <div>
@@ -573,16 +563,7 @@ function ServiceCategory() {
                         color="purple"
                         icon={HiCheck}
                       >
-                        Full Arms
-                      </Badge>
-                    </div>
-                    <div>
-                      <Badge
-                        className="text-sm font-semibold cursor-pointer"
-                        color="purple"
-                        icon={HiCheck}
-                      >
-                        Underms
+                        French Manicure
                       </Badge>
                     </div>
                   </div>
